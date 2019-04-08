@@ -1,0 +1,39 @@
+1. https://stackoverflow.com/questions/4470523/create-a-branch-in-git-from-another-branch
+
+2. https://backlog.com/git-tutorial/kr/stepup/stepup2_8.html
+
+*How to Use
+1. How to Use Git
+(Bold word means you can make as you want)
+®ÁGit Configuration Command
+- $git config --global user.name "gwangseok.ha"
+- $git config --global user.email "gwangseok.ha@openhouse.com"
+
+®ËSSH(Network Protocol) 
+(Bold word means you can make as you want)
+- $ssh-keygen -t rsa -b 4096 -C "gwangseok.ha@openhouse-group.com"
+- Enter file in which to save the key (/c/Users/hagwangseok/.ssh/id_rsa): giteassh
+- Enter passphrase (empty for no passphrase): open
+*You can get 2key(private key, public key).
+*You have to copy public key and paste to SSH key in Gitea Server.
+
+®ÈWindows Setting
+- eval $(ssh-agent -s)
+- ssh-add giteassh
+
+®ÍUse Git clone
+- $git clone git@gitea.openhouse-group.com:OpenHouse-Org/Gitea-Training-Prj.git folder1
+*You must user git clone command in Parent directory. Just Do 1time.
+
+®ÎMake Git Branch
+- $git branch lesson_1
+- $git push origin lesson_1
+*$git branch lesson_1 means branch in Local
+*$git push origin lesson_1 lmeans branch in Remote
+
+®ÏChange Git Branch
+- $git checkout lesson_1
+
+®ÌMerge Git Branch
+- $git merge lesson_1
+*If you want merge master in lesson_1 branch you must write command in master branch
